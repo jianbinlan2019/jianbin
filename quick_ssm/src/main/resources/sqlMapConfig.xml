@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--核心文件约束头-->
+<configuration>
+
+    <!--加载配置文件-->
+    <properties resource="jdbc.properties"></properties>
+
+    <!--定义别名-->
+    <typeAliases>
+        <!--<typeAlias type="hust.cad.domain.Acount" alias="acount"></typeAlias>-->
+        <!--定义别名的另一种方式-->
+        <package name="hust.cad.domain"/>
+    </typeAliases>
+
+    <!--配置环境-->
+    <environments default="development">
+        <environment id="development">
+            <!--事务管理器-->
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--加载映射-->
+    <mappers>
+        <mapper resource="hust.cad.mapper/AcountMapper.xml"></mapper>
+    </mappers>
+</configuration>

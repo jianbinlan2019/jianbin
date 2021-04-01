@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--引入头部约束-->
+
+<mapper namespace="hust.cad.mapper.AcountMapper">
+    <!--注意这儿是parameterType 不是parameterMap-->
+    <insert id="save" parameterType="acount">
+        insert into acount values(#{id},#{name},#{money})
+    </insert>
+
+    <select id="findAll" resultType="acount">
+        select * from acount
+    </select>
+</mapper>
+

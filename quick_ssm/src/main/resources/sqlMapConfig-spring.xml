@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--核心文件约束头-->
+<configuration>
+
+
+    <!--定义别名-->
+    <typeAliases>
+        <!--<typeAlias type="hust.cad.domain.Acount" alias="acount"></typeAlias>-->
+        <!--定义别名的另一种方式-->
+        <package name="hust.cad.domain"/>
+    </typeAliases>
+
+    <!--加载映射-->
+    <!--<mappers>
+        &lt;!&ndash;扫描使用注解的类&ndash;&gt;
+        <package name="hust.cad.mapper"/>
+    </mappers>-->
+    <!--<mappers>
+        <mapper resource="hust.cad.mapper/AcountMapper.xml"></mapper>
+    </mappers>-->
+
+</configuration>
